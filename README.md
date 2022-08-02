@@ -6,7 +6,7 @@ INSTALLATION STEP :
 
 2 - install database 
 
-    use dev-FCP-V;
+    use dev-FCP-V2;
 
     CREATE TABLE Spaceship(
         id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -27,6 +27,15 @@ INSTALLATION STEP :
         mass INT,
         x INT,
         y INT
+    );
+
+    CREATE TABLE Player(
+        id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+        username VARCHAR(100),
+        password VARCHAR(100),
+        x INT,
+        y INT,
+        landing_planet_id INT
     );
 
 3 - install mariadb

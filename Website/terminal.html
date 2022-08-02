@@ -9,8 +9,16 @@
         <script>
             $(function() {
                 $('body').terminal({
-                    hello: function(what) {
+                    hello: function(what){
                         this.echo('Hello, ' + what + '. Welcome to this terminal.');
+                    },
+                    exit: function(){
+                        var message = "logout";
+                        window.parent.postMessage(message, '*');
+                        //window.location.href = "./login.php";
+                    },
+                    help: function(){
+                        this.echo("- hello <arg> : be welcomed\n- exit : exit the game\n");
                     }
                 }, {
                     greetings: 'Potato Corp (c)[version 88.0.1901.666]\n~K:\\Potato'

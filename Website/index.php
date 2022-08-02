@@ -29,5 +29,13 @@
     <body onResize="window.location.href = window.location.href;">
         <script type="module" src="./app.js"></script>
         <iframe class = "terminal" src="terminal.html"></iframe>
+        <script>
+            window.addEventListener('message', function (e) {
+                const data = e.data;
+                if (data == "logout"){
+                    window.location.href = "./logout.php";
+                }
+            });
+        </script>
     </body>
 </html>
