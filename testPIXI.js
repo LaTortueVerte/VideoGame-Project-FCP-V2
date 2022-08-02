@@ -1,21 +1,24 @@
 const Application = PIXI.Application;
+const Graphics = PIXI.Graphics;
 
 const app = new Application({
-    width: 500,
-    height: 500,
     transparent: false,
-    antialias: true
+    antialias: true,
+    resizeTo: window
 });
+
+PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 app.renderer.backgroundColor = 0x23395D;
 app.renderer.resize(window.innerWidth, window.innerHeight);
 app.renderer.view.style.position = 'absolute';
-
 document.body.appendChild(app.view);
 
+window.onresize = function(){ 
+    window.location.href = "./index.php"; // redirect to itself = reload page
+}
+
 //  Create rectangle
-
-
 
 const rectangle = new Graphics();
 rectangle.beginFill(0xAA33BB);

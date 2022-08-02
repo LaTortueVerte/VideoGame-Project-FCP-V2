@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+    </head>
+    <body>
+        <script>
+            $(function() {
+                $('body').terminal({
+                    hello: function(what) {
+                        this.echo('Hello, ' + what + '. Welcome to this terminal.');
+                    }
+                }, {
+                    greetings: 'Potato Corp (c)[version 88.0.1901.666]\n~K:\\Potato'
+                });
+            });
+        </script>
+    </body>
+</html>
